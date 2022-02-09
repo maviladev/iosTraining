@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var resultDiscount: UILabel!
+    @IBOutlet weak var amountTxt: UITextField!
+    @IBOutlet weak var discountTxt: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,6 +39,30 @@ class ViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    
+    @IBAction func calculate(_ sender: UIButton) {
+        guard let amount = amountTxt.text else { return }
+        guard let discount = discountTxt.text else { return }
+        
+        let amountConverted = (amount as NSString).floatValue
+        let discountConverted = (discount as NSString).floatValue
+        
+        let totalDiscount = amountConverted * discountConverted / 100
+        let totalAmount = amountConverted - totalDiscount
+        
+        result.text = "$\(totalAmount)"
+        resultDiscount.text = "$\(totalDiscount)"
+        self.view.endEditing(true)
+    }
+    
+    
+    @IBAction func clean(_ sender: UIButton) {
+        result.text = "$0.00"
+        resultDiscount.text = "$0.00"
+        amountTxt.text = ""
+        discountTxt.text = ""
     }
 }
 
