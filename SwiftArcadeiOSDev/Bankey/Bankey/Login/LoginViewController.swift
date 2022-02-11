@@ -13,6 +13,14 @@ class LoginViewController: UIViewController {
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
     
+    var username: String? {
+        return loginView.usernameTextField.text
+    }
+    
+    var password: String? {
+        return loginView.userPassTextField.text
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,8 +43,7 @@ extension LoginViewController {
         errorMessageLabel.textAlignment = .center
         errorMessageLabel.textColor = .systemRed
         errorMessageLabel.numberOfLines = 0
-        errorMessageLabel.isHidden = false
-        errorMessageLabel.text = "User name / password is wrong"
+        errorMessageLabel.isHidden = true
         
     }
     
@@ -62,8 +69,6 @@ extension LoginViewController {
             
         ])
         
-        
-        
     }
     
 }
@@ -71,6 +76,35 @@ extension LoginViewController {
 // MARK: Actions
 extension LoginViewController {
     @objc func signInTapped(sender: UIButton) {
+        errorMessageLabel.isHidden = true
+        login()
+    }
+    
+    func login() {
+        //cunwrap optionals
+        guard let username = username, let password = password else {
+            assertionFailure("Username / password should never be nil")
+            return
+        }
         
+        if username.isEmpty || password.isEmpty {
+            configureView(withMessage: "Username / password cannot be blank")
+            return
+        }
+        
+        if username == "dev" && password == "yesIam" {
+            // loader at side of title button
+            signInButton.configuration?.showsActivityIndicator = true
+        } else {
+            configureView(withMessage: "Incorrect username / password")
+        }
+        
+        return
+        
+    }
+    
+    private func configureView(withMessage message: String){
+        errorMessageLabel.isHidden = false
+        errorMessageLabel.text = message
     }
 }
