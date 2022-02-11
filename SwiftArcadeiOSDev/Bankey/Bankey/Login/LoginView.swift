@@ -13,6 +13,7 @@ class LoginView: UIView, UITextFieldDelegate {
     let usernameTextField = UITextField()
     let userPassTextField = UITextField()
     let stackView = UIStackView()
+    let dividerView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +31,7 @@ extension LoginView {
     
     func style() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .orange
+        backgroundColor = .secondarySystemBackground
         
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         usernameTextField.placeholder = "Username"
@@ -45,11 +46,19 @@ extension LoginView {
         stackView.axis = .vertical
         stackView.spacing = 8
         
+        dividerView.translatesAutoresizingMaskIntoConstraints = false
+        dividerView.backgroundColor = .secondarySystemFill
+        
+        layer.cornerRadius = 5
+        clipsToBounds = true
+        
+        
     }
     
     func layout() {
         
         stackView.addArrangedSubview(usernameTextField)
+        stackView.addArrangedSubview(dividerView)
         stackView.addArrangedSubview(userPassTextField)
         
         addSubview(stackView)
@@ -58,9 +67,10 @@ extension LoginView {
             stackView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
             trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1)
-            
+            bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1),
+            dividerView.heightAnchor.constraint(equalToConstant: 1)
         ])
+        
         
     }
     
