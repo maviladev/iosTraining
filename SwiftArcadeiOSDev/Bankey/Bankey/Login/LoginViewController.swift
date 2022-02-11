@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
 
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
+    let errorMessageLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,19 @@ extension LoginViewController {
         signInButton.setTitle("Sign In", for: [])
         signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
         
+        errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
+        errorMessageLabel.textAlignment = .center
+        errorMessageLabel.textColor = .systemRed
+        errorMessageLabel.numberOfLines = 0
+        errorMessageLabel.isHidden = false
+        errorMessageLabel.text = "User name / password is wrong"
+        
     }
     
     private func layout() {
         view.addSubview(loginView)
         view.addSubview(signInButton)
+        view.addSubview(errorMessageLabel)
         
         NSLayoutConstraint.activate([
             // LoginView
@@ -45,8 +54,12 @@ extension LoginViewController {
             // Button
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
             signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+            signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
         
+            // Error label
+            errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
+            errorMessageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
         ])
         
         
