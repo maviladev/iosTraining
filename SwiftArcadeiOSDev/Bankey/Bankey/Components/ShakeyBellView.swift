@@ -9,7 +9,10 @@ import Foundation
 import UIKit
 
 class ShakeyBellView: UIView {
+    
     let imageView = UIImageView()
+    let badgeView = UIButton()
+    let badgeHeight:CGFloat = 16
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,17 +47,33 @@ extension ShakeyBellView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         let image = UIImage(systemName: "bell.fill")!.withTintColor(.white, renderingMode: .alwaysOriginal)
         imageView.image = image
+        
+        badgeView.translatesAutoresizingMaskIntoConstraints = false
+        badgeView.backgroundColor = .systemRed
+        badgeView.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        badgeView.layer.cornerRadius = badgeHeight / 2
+        badgeView.setTitle("9", for: .normal)
+        badgeView.setTitleColor(.white, for: .normal)
+        
     }
     
     func layout() {
         addSubview(imageView)
+        addSubview(badgeView)
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 24),
-            imageView.widthAnchor.constraint(equalToConstant: 24)
+            imageView.widthAnchor.constraint(equalToConstant: 24),
         
+            
+            badgeView.topAnchor.constraint(equalTo: imageView.topAnchor),
+            badgeView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -9),
+            badgeView.widthAnchor.constraint(equalToConstant: 16),
+            badgeView.heightAnchor.constraint(equalToConstant: 16)
+            
+            
         ])
     }
 }
