@@ -16,6 +16,7 @@
 		0465685127C207A500FAD12E /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465685027C207A500FAD12E /* UITextField+SecureToggle.swift */; };
 		0465685427C21D1B00FAD12E /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465685327C21D1B00FAD12E /* ShakeyBellView.swift */; };
 		046B3A7827C4A501006605C3 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B3A7727C4A501006605C3 /* Date+Utils.swift */; };
+		046B3A7A27C4A6A4006605C3 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B3A7927C4A6A4006605C3 /* AccountSummaryViewController+Networking.swift */; };
 		046D4B4727B6072300468A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D4B4627B6072300468A2B /* AppDelegate.swift */; };
 		046D4B4B27B6072300468A2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D4B4A27B6072300468A2B /* LoginViewController.swift */; };
 		046D4B5027B6072400468A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046D4B4F27B6072400468A2B /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		0465685027C207A500FAD12E /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		0465685327C21D1B00FAD12E /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		046B3A7727C4A501006605C3 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		046B3A7927C4A6A4006605C3 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		046D4B4327B6072300468A2B /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046D4B4627B6072300468A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046D4B4A27B6072300468A2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0472134527BDF72D0045A8C5 /* AccountSummaryViewController.swift */,
+				046B3A7927C4A6A4006605C3 /* AccountSummaryViewController+Networking.swift */,
 				0439AD4A27BF3C1000B7720E /* Header */,
 				0439AD4B27BF3C2600B7720E /* Cells */,
 			);
@@ -326,6 +329,7 @@
 				0472134627BDF72D0045A8C5 /* AccountSummaryViewController.swift in Sources */,
 				046D4B4727B6072300468A2B /* AppDelegate.swift in Sources */,
 				045D551627BB722A00EBFF59 /* OnboardingContainerViewController.swift in Sources */,
+				046B3A7A27C4A6A4006605C3 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
