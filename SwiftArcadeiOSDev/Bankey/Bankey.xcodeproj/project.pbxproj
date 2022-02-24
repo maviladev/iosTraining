@@ -30,6 +30,8 @@
 		0472134A27BDFB800045A8C5 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0472134927BDFB800045A8C5 /* AccountSummaryHeaderView.xib */; };
 		047CAB9D27C6C0CC009C556D /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CAB9C27C6C0CC009C556D /* SkeletonLoadable.swift */; };
 		047CAB9F27C6C168009C556D /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CAB9E27C6C168009C556D /* SkeletonCell.swift */; };
+		047CABA227C70566009C556D /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABA127C70566009C556D /* ProfileManager.swift */; };
+		047CABA427C70797009C556D /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABA327C70797009C556D /* AccountSummaryViewControllerTests.swift */; };
 		04C3782127BC679D00F2F6CE /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3782027BC679D00F2F6CE /* DummyViewController.swift */; };
 		04C3782427BC923600F2F6CE /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3782327BC923600F2F6CE /* LocalState.swift */; };
 		04C3782627BCB46A00F2F6CE /* UIViewControler+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3782527BCB46A00F2F6CE /* UIViewControler+Utils.swift */; };
@@ -73,6 +75,8 @@
 		0472134927BDFB800045A8C5 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		047CAB9C27C6C0CC009C556D /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		047CAB9E27C6C168009C556D /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		047CABA127C70566009C556D /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		047CABA327C70797009C556D /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		04C3782027BC679D00F2F6CE /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		04C3782327BC923600F2F6CE /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		04C3782527BCB46A00F2F6CE /* UIViewControler+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControler+Utils.swift"; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			children = (
 				046B3A7F27C4B269006605C3 /* ProfileTests.swift */,
 				046B3A8127C4B2ED006605C3 /* AccountTests.swift */,
+				047CABA327C70797009C556D /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -215,12 +220,21 @@
 		0472134427BDF6FB0045A8C5 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
+				047CABA027C70553009C556D /* Networking */,
 				0472134527BDF72D0045A8C5 /* AccountSummaryViewController.swift */,
 				046B3A7927C4A6A4006605C3 /* AccountSummaryViewController+Networking.swift */,
 				0439AD4A27BF3C1000B7720E /* Header */,
 				0439AD4B27BF3C2600B7720E /* Cells */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		047CABA027C70553009C556D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				047CABA127C70566009C556D /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		04C3782227BC922A00F2F6CE /* Utils */ = {
@@ -342,6 +356,7 @@
 				046D4B5E27B60EC500468A2B /* LoginView.swift in Sources */,
 				047CAB9F27C6C168009C556D /* SkeletonCell.swift in Sources */,
 				046B3A7827C4A501006605C3 /* Date+Utils.swift in Sources */,
+				047CABA227C70566009C556D /* ProfileManager.swift in Sources */,
 				04C3782427BC923600F2F6CE /* LocalState.swift in Sources */,
 				04C3782127BC679D00F2F6CE /* DummyViewController.swift in Sources */,
 				0439AD4F27BF63FB00B7720E /* DecimalUtil.swift in Sources */,
@@ -370,6 +385,7 @@
 				046DF34827C053C400C9AA40 /* CurrencyFormatterTests.swift in Sources */,
 				046B3A8227C4B2ED006605C3 /* AccountTests.swift in Sources */,
 				046B3A8027C4B269006605C3 /* ProfileTests.swift in Sources */,
+				047CABA427C70797009C556D /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
