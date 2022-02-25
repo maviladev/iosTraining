@@ -57,9 +57,17 @@ class ViewController: UIViewController {
     }
 
     private func setupScreen(index: Int) {
+    
         titleLabel.text = items[index].title
         detailLabel.text = items[index].detail
         pageControl.currentPage = index
+        
+        self.titleLabel.alpha = 1.0
+        self.detailLabel.alpha = 1.0
+//      this reset position of view
+        self.titleLabel.transform = .identity
+        self.detailLabel.transform = .identity
+    
     }
 
     private func setupTapGesture() {
@@ -92,15 +100,32 @@ class ViewController: UIViewController {
             }) { _ in
                 
                 self.currentPage += 1
-                self.titleLabel.alpha = 1.0
-                self.detailLabel.alpha = 1.0
-//                this reset position of view
-                self.titleLabel.transform = .identity
-                self.detailLabel.transform = .identity
-                self.setupScreen(index: self.currentPage)
                 
+                if self.isOverLastItem() {
+//                    show main screen
+                    self.showMainApp()
+                } else {
+                    self.setupScreen(index: self.currentPage)
+                }
             }
         }
+    }
+    
+    private func isOverLastItem() -> Bool{
+        return currentPage == self.items.count
+    }
+    
+    private func showMainApp(){
+        let mainApp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainAppViewController")
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = mainApp
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+        
+        
     }
 }
 
