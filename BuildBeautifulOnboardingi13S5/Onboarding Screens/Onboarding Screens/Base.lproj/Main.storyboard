@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Onboarding_Screens" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UfX-jN-bqC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouY-lI-E50">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FId-RN-rhh">
+                                        <rect key="frame" x="149.5" y="846" width="115.5" height="26"/>
+                                    </pageControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-Uh-Dea">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="846"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8d-Uu-nWg">
+                                                <rect key="frame" x="36" y="373" width="342" height="100.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Your Way" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L1-1O-1FC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="31.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore thousands of hotels and find the perfect accomodation!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgG-ca-Jj4">
+                                                        <rect key="frame" x="0.0" y="48.5" width="342" height="52"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="k8d-Uu-nWg" firstAttribute="centerX" secondItem="Jg0-Uh-Dea" secondAttribute="centerX" id="3Jr-2U-ZrK"/>
+                                            <constraint firstAttribute="trailing" secondItem="k8d-Uu-nWg" secondAttribute="trailing" constant="36" id="9pc-Ru-uCG"/>
+                                            <constraint firstItem="k8d-Uu-nWg" firstAttribute="leading" secondItem="Jg0-Uh-Dea" secondAttribute="leading" constant="36" id="SVk-a0-nWN"/>
+                                            <constraint firstItem="k8d-Uu-nWg" firstAttribute="centerY" secondItem="Jg0-Uh-Dea" secondAttribute="centerY" id="f0v-Iu-8eE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jg0-Uh-Dea" secondAttribute="trailing" id="MeT-gx-c3e"/>
+                                    <constraint firstAttribute="bottom" secondItem="FId-RN-rhh" secondAttribute="bottom" constant="24" id="dcw-EP-yd5"/>
+                                    <constraint firstItem="Jg0-Uh-Dea" firstAttribute="top" secondItem="ouY-lI-E50" secondAttribute="top" id="g2y-sp-1XU"/>
+                                    <constraint firstItem="FId-RN-rhh" firstAttribute="top" secondItem="Jg0-Uh-Dea" secondAttribute="bottom" id="iam-jo-FjX"/>
+                                    <constraint firstItem="FId-RN-rhh" firstAttribute="centerX" secondItem="ouY-lI-E50" secondAttribute="centerX" id="nbB-4K-S9a"/>
+                                    <constraint firstItem="Jg0-Uh-Dea" firstAttribute="leading" secondItem="ouY-lI-E50" secondAttribute="leading" id="u8I-Uf-is6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ouY-lI-E50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Uz-7N-3z2"/>
+                            <constraint firstItem="ouY-lI-E50" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4xC-Qw-yNQ"/>
+                            <constraint firstItem="UfX-jN-bqC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HcG-6P-DZM"/>
+                            <constraint firstAttribute="bottom" secondItem="UfX-jN-bqC" secondAttribute="bottom" id="SbC-zA-zjG"/>
+                            <constraint firstAttribute="bottom" secondItem="ouY-lI-E50" secondAttribute="bottom" id="acC-0u-Amh"/>
+                            <constraint firstItem="ouY-lI-E50" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b8J-TL-9Sn"/>
+                            <constraint firstItem="UfX-jN-bqC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h4T-Gv-R4x"/>
+                            <constraint firstItem="UfX-jN-bqC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="leY-WH-BPE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="UfX-jN-bqC" id="8wn-Y6-BkM"/>
+                        <outlet property="darkView" destination="ouY-lI-E50" id="ibY-IH-Bhi"/>
+                        <outlet property="detailLabel" destination="zgG-ca-Jj4" id="LdP-BD-Kjs"/>
+                        <outlet property="pageControl" destination="FId-RN-rhh" id="hrw-zg-C5h"/>
+                        <outlet property="titleLabel" destination="2L1-1O-1FC" id="kqs-b1-arW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
