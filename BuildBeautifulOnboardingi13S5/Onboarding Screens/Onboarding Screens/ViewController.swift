@@ -40,7 +40,7 @@ class ViewController: UIViewController {
               bgImage: nil)
     ]
     
-    private let currentPage: Int = 0
+    private var currentPage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +68,39 @@ class ViewController: UIViewController {
     }
     
     @objc private func handleTapAnimation(){
-        print("Tapped!")
+        
+//        First Animation - title label
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.titleLabel.alpha = 0.8
+            self.titleLabel.transform = CGAffineTransform(translationX: -30, y: 0)
+        }) { _ in
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                self.titleLabel.alpha = 0
+                self.titleLabel.transform = CGAffineTransform(translationX: 0, y: -550)
+            }, completion: nil)
+        }
+        
+//        Second animation - detail label
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.detailLabel.alpha = 0.8
+            self.detailLabel.transform = CGAffineTransform(translationX: -30, y: 0)
+        }) { _ in
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                self.detailLabel.alpha = 0
+                self.detailLabel.transform = CGAffineTransform(translationX: 0, y: -550)
+            }) { _ in
+                
+                self.currentPage += 1
+                self.titleLabel.alpha = 1.0
+                self.detailLabel.alpha = 1.0
+//                this reset position of view
+                self.titleLabel.transform = .identity
+                self.detailLabel.transform = .identity
+                self.setupScreen(index: self.currentPage)
+                
+            }
+        }
     }
-    
 }
 
