@@ -42,6 +42,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupPageControl()
+    }
+    
+    private func setupPageControl(){
+        pageControl.numberOfPages = items.count
     }
     
     private func setupCollectionView(){
@@ -56,7 +61,19 @@ class ViewController: UIViewController {
     
 
     @IBAction func nextButtonTapped(_ sender: Any) {
-        
+        let nextRow = getCurrentIndex() + 1
+        let nextIndexPath = IndexPath(row: nextRow, section: 0)
+        collectionView.scrollToItem(at: nextIndexPath, at: .left, animated: true)
+        showItem(at: nextRow)
+    }
+    
+    private func showItem(at index: Int){
+//        let index = indexPath.item
+        pageControl.currentPage = index
+    }
+    
+    private func getCurrentIndex() -> Int {
+        return Int(collectionView.contentOffset.x / collectionView.frame.width)
     }
 }
 
