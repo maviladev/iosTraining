@@ -53,7 +53,7 @@
                                                             <rect key="frame" x="0.0" y="395" width="395" height="128"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food at its best" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-CU-dQj">
-                                                                    <rect key="frame" x="36" y="24" width="323" height="80"/>
+                                                                    <rect key="frame" x="36" y="0.0" width="323" height="104"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                                                 <constraint firstItem="d0i-CU-dQj" firstAttribute="leading" secondItem="AoI-GB-XEz" secondAttribute="leading" constant="36" id="0ND-pJ-zck"/>
                                                                 <constraint firstAttribute="bottom" secondItem="d0i-CU-dQj" secondAttribute="bottom" constant="24" id="1dy-m9-aMV"/>
                                                                 <constraint firstAttribute="trailing" secondItem="d0i-CU-dQj" secondAttribute="trailing" constant="36" id="TDC-BC-sA8"/>
-                                                                <constraint firstItem="d0i-CU-dQj" firstAttribute="top" secondItem="AoI-GB-XEz" secondAttribute="top" constant="24" id="fAX-Tx-oeM"/>
+                                                                <constraint firstItem="d0i-CU-dQj" firstAttribute="top" secondItem="AoI-GB-XEz" secondAttribute="top" id="fAX-Tx-oeM"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7de-NI-ogu">
@@ -88,6 +88,11 @@
                                                                         <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </buttonConfiguration>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                     <connections>
                                                                         <action selector="actionButtonTapped" destination="YC6-j8-UGW" eventType="touchUpInside" id="mhB-yW-V14"/>
                                                                     </connections>
