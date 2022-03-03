@@ -38,6 +38,8 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        removeAppEventsSuscribers()
+        removePlayer()
     }
 
     override func viewDidLayoutSubviews() {
@@ -99,10 +101,28 @@ class ViewController: UIViewController {
         notificationCenter.publisher(for: .AVPlayerItemDidPlayToEndTime).sink {[weak self] _ in
             self?.restartVideo()
         }.store(in: &appEventSuscribers)
+        
+        notificationCenter.publisher(for: UIApplication.willResignActiveNotification).sink { [weak self] _ in
+            self?.pauseVideo()
+        }.store(in: &appEventSuscribers)
+        
+        notificationCenter.publisher(for: UIApplication.didBecomeActiveNotification).sink { [weak self] _ in
+            self?.playVideo()
+        }.store(in: &appEventSuscribers)
     }
     
-    @IBAction func getStartedButtonTapped(_ sender: Any) {
+    private func removeAppEventsSuscribers() {
+        appEventSuscribers.forEach({ subscriber in
+            subscriber.cancel()
+        })
+    }
+    
+    private func removePlayer() {
+        player?.pause()
+        player = nil
         
+        playerLayer?.removeFromSuperlayer()
+        playerLayer = nil
     }
 }
 
