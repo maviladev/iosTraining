@@ -143,6 +143,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let shouldShow = indexPath.item == items.count - 1
         cell.showExploreButton(shouldShow: shouldShow)
         let item = items[indexPath.item]
+        cell.delegate = self
         cell.configure(with: item)
         return cell
     }
@@ -156,11 +157,33 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 }
 
+extension ViewController: QuoteCollectionViewCellDelegate {
+    func didTapExploreButton() {
+        
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainAppViewController")
+        
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+            window.rootViewController = mainAppViewController
+            
+//            animation
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+    }
+    
+    
+}
+
+protocol QuoteCollectionViewCellDelegate: AnyObject {
+    func didTapExploreButton()
+}
+
 class QuoteCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var exploreButton: UIButton!
+    
+    weak var delegate: QuoteCollectionViewCellDelegate?
     
     func configure(with item: OnboardingItem) {
         titleLabel.text = item.title
@@ -172,6 +195,6 @@ class QuoteCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func exploreButtonTapped(_ sender: Any) {
-        
+        delegate?.didTapExploreButton()
     }
 }
