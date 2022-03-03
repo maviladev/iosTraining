@@ -7,14 +7,10 @@
 
 import UIKit
 
-struct OnboardingItem {
-    let title: String
-    let detail: String
-    let image: UIImage?
-}
 
 
-class ViewController: UIViewController {
+
+class OnboardingViewController: UIViewController {
 
     @IBOutlet weak var netButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -23,35 +19,19 @@ class ViewController: UIViewController {
     
     private var imageViews = [UIImageView]()
     
-    private let items: [OnboardingItem] = [
-        .init(title: "Diana Vreeland",
-              detail: "Fashion is part of the daily air and it changes all the time, with all the events. You can even see the approaching of a revolution in clothes. You can see and feel everything in clothes.",
-             image: UIImage(named: "imFashion1")),
-              
-        .init(title: "Gianni Versace",
-              detail: "Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live.",
-              image: UIImage(named: "imFashion2")),
-              
-        .init(title: "Karl Lagerfeld",
-              detail: "One is never over-dressed or under-dressed with a Little Black Dress.",
-              image: UIImage(named: "imFashion3")),
-              
-        .init(title: "Miuccia Prada",
-              detail: "What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language.",
-              image: UIImage(named: "imFashion4")),
-              
-        .init(title: "Bette Midler",
-              detail: "I firmly believe that with the right footwear one can rule the world.",
-              image: UIImage(named: "imFashion5")),
-              
-    ]
     
+    private var items: [OnboardingItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPlaceHolderItems()
         setupCollectionView()
         setupPageControl()
         setupImageViews()
+    }
+    
+    private func setupPlaceHolderItems() {
+        items = OnboardingItem.placeHolderItems
     }
     
     private func setupImageViews() {
@@ -132,7 +112,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -158,7 +138,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 }
 
-extension ViewController: QuoteCollectionViewCellDelegate {
+extension OnboardingViewController: QuoteCollectionViewCellDelegate {
     func didTapExploreButton() {
         
         let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainAppViewController")
@@ -174,28 +154,6 @@ extension ViewController: QuoteCollectionViewCellDelegate {
     
 }
 
-protocol QuoteCollectionViewCellDelegate: AnyObject {
-    func didTapExploreButton()
-}
 
-class QuoteCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var exploreButton: UIButton!
-    
-    weak var delegate: QuoteCollectionViewCellDelegate?
-    
-    func configure(with item: OnboardingItem) {
-        titleLabel.text = item.title
-        detailLabel.text = item.detail
-    }
-    
-    func showExploreButton(shouldShow: Bool){
-        exploreButton.isHidden = !shouldShow
-    }
-    
-    @IBAction func exploreButtonTapped(_ sender: Any) {
-        delegate?.didTapExploreButton()
-    }
-}
+
+
