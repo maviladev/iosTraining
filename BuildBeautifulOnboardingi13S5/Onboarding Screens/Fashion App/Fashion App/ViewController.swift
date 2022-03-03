@@ -100,6 +100,9 @@ class ViewController: UIViewController {
     private func showItem(at index: Int){
 //        let index = indexPath.item
         pageControl.currentPage = index
+        
+        let shouldHide = index == items.count - 1
+        netButton.isHidden = shouldHide
     }
     
     private func getCurrentIndex() -> Int {
@@ -136,6 +139,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath) as! QuoteCollectionViewCell
+        
+        let shouldShow = indexPath.item == items.count - 1
+        cell.showExploreButton(shouldShow: shouldShow)
         let item = items[indexPath.item]
         cell.configure(with: item)
         return cell
@@ -154,10 +160,18 @@ class QuoteCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
- 
+    @IBOutlet weak var exploreButton: UIButton!
+    
     func configure(with item: OnboardingItem) {
         titleLabel.text = item.title
         detailLabel.text = item.detail
     }
     
+    func showExploreButton(shouldShow: Bool){
+        exploreButton.isHidden = !shouldShow
+    }
+    
+    @IBAction func exploreButtonTapped(_ sender: Any) {
+        
+    }
 }
