@@ -107,30 +107,38 @@
                                                                 <constraint firstItem="vSS-Yu-xcO" firstAttribute="centerY" secondItem="jSw-T5-xbG" secondAttribute="centerY" id="lPS-Xd-W8j"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svB-FF-jxF">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Ko-A0-zEm">
                                                             <rect key="frame" x="36" y="642" width="322" height="48"/>
-                                                            <color key="backgroundColor" systemColor="labelColor"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svB-FF-jxF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="322" height="48"/>
+                                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="48" id="Fem-wb-hIY"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title="EXPLORE">
+                                                                        <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="exploreButtonTapped:" destination="yrC-bI-w4w" eventType="touchUpInside" id="VrQ-xG-RoW"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="48" id="Fem-wb-hIY"/>
+                                                                <constraint firstAttribute="height" constant="48" id="Tb7-Kl-TAO"/>
                                                             </constraints>
-                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="EXPLORE">
-                                                                <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                            </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="exploreButtonTapped:" destination="yrC-bI-w4w" eventType="touchUpInside" id="VrQ-xG-RoW"/>
-                                                            </connections>
-                                                        </button>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="jSw-T5-xbG" firstAttribute="leading" secondItem="jUh-SB-Ger" secondAttribute="leading" id="HhK-9q-xKi"/>
-                                                        <constraint firstAttribute="bottom" secondItem="svB-FF-jxF" secondAttribute="bottom" constant="36" id="Oxm-LQ-bvh"/>
-                                                        <constraint firstAttribute="trailing" secondItem="svB-FF-jxF" secondAttribute="trailing" constant="36" id="Pfq-fb-Xkh"/>
                                                         <constraint firstItem="jSw-T5-xbG" firstAttribute="top" secondItem="jUh-SB-Ger" secondAttribute="top" id="RF6-Sc-i99"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5Ko-A0-zEm" secondAttribute="trailing" constant="36" id="RrL-qz-aAr"/>
+                                                        <constraint firstItem="5Ko-A0-zEm" firstAttribute="leading" secondItem="jUh-SB-Ger" secondAttribute="leading" constant="36" id="TUn-pI-KZ6"/>
                                                         <constraint firstAttribute="trailing" secondItem="jSw-T5-xbG" secondAttribute="trailing" id="mqq-rw-Sc0"/>
                                                         <constraint firstItem="jSw-T5-xbG" firstAttribute="height" secondItem="jUh-SB-Ger" secondAttribute="height" multiplier="0.2" id="r9Q-v6-S54"/>
-                                                        <constraint firstItem="svB-FF-jxF" firstAttribute="leading" secondItem="jUh-SB-Ger" secondAttribute="leading" constant="36" id="ugq-nx-A1q"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5Ko-A0-zEm" secondAttribute="bottom" constant="36" id="uJy-mW-YrZ"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
