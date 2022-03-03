@@ -21,20 +21,88 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jWh-cG-e21">
-                                    <size key="itemSize" width="395" height="329"/>
+                                    <size key="itemSize" width="395" height="805"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellid" id="YC6-j8-UGW">
-                                        <rect key="frame" x="9.5" y="0.0" width="395" height="329"/>
+                                        <rect key="frame" x="9.5" y="0.0" width="395" height="805"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mZM-3F-ZGa">
-                                            <rect key="frame" x="0.0" y="0.0" width="395" height="329"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="395" height="805"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-Xg-COC">
+                                                    <rect key="frame" x="0.0" y="113" width="395" height="579"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzC-f2-3Yp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="395" height="395"/>
+                                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="CzC-f2-3Yp" secondAttribute="height" multiplier="1:1" id="PtU-9S-0QE"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AoI-GB-XEz">
+                                                            <rect key="frame" x="0.0" y="395" width="395" height="128"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food at its best" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-CU-dQj">
+                                                                    <rect key="frame" x="36" y="24" width="323" height="80"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="d0i-CU-dQj" firstAttribute="leading" secondItem="AoI-GB-XEz" secondAttribute="leading" constant="36" id="0ND-pJ-zck"/>
+                                                                <constraint firstAttribute="bottom" secondItem="d0i-CU-dQj" secondAttribute="bottom" constant="24" id="1dy-m9-aMV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="d0i-CU-dQj" secondAttribute="trailing" constant="36" id="TDC-BC-sA8"/>
+                                                                <constraint firstItem="d0i-CU-dQj" firstAttribute="top" secondItem="AoI-GB-XEz" secondAttribute="top" constant="24" id="fAX-Tx-oeM"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7de-NI-ogu">
+                                                            <rect key="frame" x="0.0" y="523" width="395" height="56"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hau-8N-wJ1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="56"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="hau-8N-wJ1" secondAttribute="height" multiplier="1:2" id="9bt-bG-rZG"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cy-Jc-MlE">
+                                                                    <rect key="frame" x="28" y="0.0" width="339" height="56"/>
+                                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="56" id="z8C-as-H58"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title="Get Started">
+                                                                        <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVF-5i-kBI">
+                                                                    <rect key="frame" x="367" y="0.0" width="28" height="56"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="rVF-5i-kBI" secondAttribute="height" multiplier="1:2" id="hUf-gV-wxM"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pdr-Xg-COC" firstAttribute="leading" secondItem="mZM-3F-ZGa" secondAttribute="leading" id="DsN-Aw-dle"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pdr-Xg-COC" secondAttribute="trailing" id="ZMO-N7-P5t"/>
+                                                <constraint firstItem="Pdr-Xg-COC" firstAttribute="centerY" secondItem="mZM-3F-ZGa" secondAttribute="centerY" id="n1q-CE-VeY"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="395" height="329"/>
+                                        <size key="customSize" width="395" height="805"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -60,6 +128,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
