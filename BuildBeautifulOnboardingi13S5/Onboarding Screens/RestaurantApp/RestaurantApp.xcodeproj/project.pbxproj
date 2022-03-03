@@ -13,6 +13,9 @@
 		0465AAC027D10D1300F383F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0465AABE27D10D1300F383F7 /* Main.storyboard */; };
 		0465AAC227D10D1400F383F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0465AAC127D10D1400F383F7 /* Assets.xcassets */; };
 		0465AAC527D10D1400F383F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0465AAC327D10D1400F383F7 /* LaunchScreen.storyboard */; };
+		0495F35127D131B7005180B3 /* lottieDeliveryGuy.json in Resources */ = {isa = PBXBuildFile; fileRef = 0495F34F27D131B7005180B3 /* lottieDeliveryGuy.json */; };
+		0495F35227D131B7005180B3 /* lottieRestaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 0495F35027D131B7005180B3 /* lottieRestaurant.json */; };
+		57C1E1B4829A28BE077AF640 /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64999B997832BB41CD572DE6 /* Pods_RestaurantApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		0465AAC127D10D1400F383F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0465AAC427D10D1400F383F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0465AAC627D10D1400F383F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0495F34F27D131B7005180B3 /* lottieDeliveryGuy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieDeliveryGuy.json; sourceTree = "<group>"; };
+		0495F35027D131B7005180B3 /* lottieRestaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieRestaurant.json; sourceTree = "<group>"; };
+		52B72E84903D40B2D4823FD9 /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
+		64999B997832BB41CD572DE6 /* Pods_RestaurantApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F65A0EABB563B362DC20C8 /* Pods-RestaurantApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C1E1B4829A28BE077AF640 /* Pods_RestaurantApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				0465AAB727D10D1300F383F7 /* RestaurantApp */,
 				0465AAB627D10D1300F383F7 /* Products */,
+				841FB562380CC853BABDEA78 /* Pods */,
+				D7ACC7FA9703B3738BCE227C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,7 @@
 		0465AAB727D10D1300F383F7 /* RestaurantApp */ = {
 			isa = PBXGroup;
 			children = (
+				0495F34E27D1319D005180B3 /* assets */,
 				0465AAB827D10D1300F383F7 /* AppDelegate.swift */,
 				0465AABA27D10D1300F383F7 /* SceneDelegate.swift */,
 				0465AABC27D10D1300F383F7 /* OnboardingViewController.swift */,
@@ -67,6 +79,32 @@
 			path = RestaurantApp;
 			sourceTree = "<group>";
 		};
+		0495F34E27D1319D005180B3 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				0495F34F27D131B7005180B3 /* lottieDeliveryGuy.json */,
+				0495F35027D131B7005180B3 /* lottieRestaurant.json */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		841FB562380CC853BABDEA78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79F65A0EABB563B362DC20C8 /* Pods-RestaurantApp.debug.xcconfig */,
+				52B72E84903D40B2D4823FD9 /* Pods-RestaurantApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7ACC7FA9703B3738BCE227C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64999B997832BB41CD572DE6 /* Pods_RestaurantApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0465AAC927D10D1400F383F7 /* Build configuration list for PBXNativeTarget "RestaurantApp" */;
 			buildPhases = (
+				503E354ABA426C709063A3A1 /* [CP] Check Pods Manifest.lock */,
 				0465AAB127D10D1300F383F7 /* Sources */,
 				0465AAB227D10D1300F383F7 /* Frameworks */,
 				0465AAB327D10D1300F383F7 /* Resources */,
+				1249D1CB5E1F3C9178C3B560 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0495F35227D131B7005180B3 /* lottieRestaurant.json in Resources */,
+				0495F35127D131B7005180B3 /* lottieDeliveryGuy.json in Resources */,
 				0465AAC527D10D1400F383F7 /* LaunchScreen.storyboard in Resources */,
 				0465AAC227D10D1400F383F7 /* Assets.xcassets in Resources */,
 				0465AAC027D10D1300F383F7 /* Main.storyboard in Resources */,
@@ -132,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1249D1CB5E1F3C9178C3B560 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		503E354ABA426C709063A3A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestaurantApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0465AAB127D10D1300F383F7 /* Sources */ = {
@@ -284,6 +368,7 @@
 		};
 		0465AACA27D10D1400F383F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F65A0EABB563B362DC20C8 /* Pods-RestaurantApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +397,7 @@
 		};
 		0465AACB27D10D1400F383F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52B72E84903D40B2D4823FD9 /* Pods-RestaurantApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

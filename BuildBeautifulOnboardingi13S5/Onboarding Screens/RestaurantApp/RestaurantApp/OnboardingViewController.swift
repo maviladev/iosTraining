@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 struct Slide {
     let title: String
@@ -14,8 +15,8 @@ struct Slide {
     let buttonTitle: String
     
     static let collection: [Slide] = [
-        .init(title: "Get your favourite food delivered to you under 30 minutes anytime", animationName: "", buttonColor: .systemYellow, buttonTitle: "Next"),
-        .init(title: "We serve only from choiced restaurants in your area", animationName: "", buttonColor: .systemGreen, buttonTitle: "Order Now")
+        .init(title: "Get your favourite food delivered to you under 30 minutes anytime", animationName: "lottieDeliveryGuy", buttonColor: .systemYellow, buttonTitle: "Next"),
+        .init(title: "We serve only from choiced restaurants in your area", animationName: "lottieRestaurant", buttonColor: .systemGreen, buttonTitle: "Order Now")
             
     ]
 }
@@ -41,6 +42,29 @@ class OnboardingViewController: UIViewController {
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
     }
+    
+    private func handleActionButtonTap(at indexPath: IndexPath){
+        if indexPath.item == slides.count - 1 {
+//            we are on the last slide
+            showMainApp()
+        } else {
+            let nextItem = indexPath.item + 1
+            let nextIndexPath = IndexPath(item: nextItem, section: 0)
+            collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
+        }
+    }
+    
+    private func showMainApp() {
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainAppViewController")
+        
+        if let windowsScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let sceneDelegate = windowsScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            
+            window.rootViewController = mainAppViewController
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+    }
 }
 
 extension OnboardingViewController: UICollectionViewDelegate,
@@ -55,6 +79,10 @@ extension OnboardingViewController: UICollectionViewDelegate,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath) as! OnboardingCollectionViewCell
         let slide = slides[indexPath.item]
         cell.configure(with: slide)
+        cell.actionButtonDidTap = { [weak self] in
+            self?.handleActionButtonTap(at: indexPath)
+            print(indexPath.item)
+        }
         return cell
     }
     
@@ -74,20 +102,32 @@ extension OnboardingViewController: UICollectionViewDelegate,
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
+    
+    var actionButtonDidTap: (() -> Void)?
+    
     
     func configure(with slide: Slide) {
         
         titleLabel.text = slide.title
         actionButton.backgroundColor = slide.buttonColor
         actionButton.setTitle(slide.buttonTitle, for: .normal)
+        
+        let animation = Animation.named(slide.animationName)
+        
+        animationView.animation = animation
+        animationView.loopMode = .loop
+        
+        if !animationView.isAnimationPlaying {
+            animationView.play()
+        }
     }
     
     
     @IBAction func actionButtonTapped() {
-            
+        actionButtonDidTap?()
     }
 }
 
