@@ -10,6 +10,7 @@ import UIKit
 struct OnboardingItem {
     let title: String
     let detail: String
+    let image: UIImage?
 }
 
 
@@ -20,21 +21,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var imageViews = [UIImageView]()
+    
     private let items: [OnboardingItem] = [
         .init(title: "Diana Vreeland",
-              detail: "Fashion is part of the daily air and it changes all the time, with all the events. You can even see the approaching of a revolution in clothes. You can see and feel everything in clothes."),
+              detail: "Fashion is part of the daily air and it changes all the time, with all the events. You can even see the approaching of a revolution in clothes. You can see and feel everything in clothes.",
+             image: UIImage(named: "imFashion1")),
               
         .init(title: "Gianni Versace",
-              detail: "Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live."),
+              detail: "Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live.",
+              image: UIImage(named: "imFashion2")),
               
         .init(title: "Karl Lagerfeld",
-              detail: "One is never over-dressed or under-dressed with a Little Black Dress."),
+              detail: "One is never over-dressed or under-dressed with a Little Black Dress.",
+              image: UIImage(named: "imFashion3")),
               
         .init(title: "Miuccia Prada",
-              detail: "What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language."),
+              detail: "What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language.",
+              image: UIImage(named: "imFashion4")),
               
         .init(title: "Bette Midler",
-              detail: "I firmly believe that with the right footwear one can rule the world."),
+              detail: "I firmly believe that with the right footwear one can rule the world.",
+              image: UIImage(named: "imFashion5")),
               
     ]
     
@@ -43,6 +51,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupPageControl()
+        setupImageViews()
+    }
+    
+    private func setupImageViews() {
+        items.forEach { item in
+            let imageView = UIImageView(image: item.image)
+            imageView.contentMode = .scaleAspectFill
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.clipsToBounds = true
+            imageView.alpha = 0.0
+            containerView.addSubview(imageView)
+            
+            NSLayoutConstraint.activate([
+                imageView.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.8),
+                imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+                imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+                imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+            ])
+            imageViews.append(imageView)
+        }
+        imageViews.first?.alpha = 1.0
+        containerView.bringSubviewToFront(collectionView)
     }
     
     private func setupPageControl(){
@@ -74,6 +104,27 @@ class ViewController: UIViewController {
     
     private func getCurrentIndex() -> Int {
         return Int(collectionView.contentOffset.x / collectionView.frame.width)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x
+        let index = getCurrentIndex()
+        let fadeInAlpha = (x - collectionViewWidth * CGFloat(index)) / collectionViewWidth
+        let fadeOutAlpha = CGFloat(1 - fadeInAlpha)
+        
+        let canShow = (index < items.count - 1)
+        guard canShow else { return }
+        imageViews[index].alpha = fadeOutAlpha
+        imageViews[index + 1].alpha = fadeInAlpha
+    }
+    
+    var collectionViewWidth: CGFloat{
+        return collectionView.frame.size.width
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = getCurrentIndex()
+        showItem(at: index)
     }
 }
 
