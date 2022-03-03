@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import Combine
 
-class ViewController: UIViewController {
+class OnboardingViewController: UIViewController {
 
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var darkView: UIView!
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
     
     private func setupViews(){
-        getStartedButton.layer.cornerRadius = 28
+        getStartedButton.layer.cornerRadius = getStartedButton.frame.height / 2
         getStartedButton.layer.masksToBounds = true
         darkView.backgroundColor = UIColor(white: 0.1, alpha: 0.4)
     }
