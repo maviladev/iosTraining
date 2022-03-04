@@ -14,6 +14,10 @@
 		0495F36927D1A68C005180B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0495F36827D1A68C005180B3 /* Assets.xcassets */; };
 		0495F36C27D1A68C005180B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F36A27D1A68C005180B3 /* LaunchScreen.storyboard */; };
 		0495F37F27D1BC21005180B3 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F37E27D1BC21005180B3 /* Transactions.storyboard */; };
+		0495F38127D1BDE7005180B3 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38027D1BDE7005180B3 /* Statistics.storyboard */; };
+		0495F38427D1BE4F005180B3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38327D1BE4F005180B3 /* Profile.storyboard */; };
+		0495F38827D1BEBE005180B3 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38727D1BEBE005180B3 /* Add.storyboard */; };
+		0495F38A27D1BEF1005180B3 /* Budget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38927D1BEF1005180B3 /* Budget.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		0495F36B27D1A68C005180B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0495F36D27D1A68C005180B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0495F37E27D1BC21005180B3 /* Transactions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transactions.storyboard; sourceTree = "<group>"; };
+		0495F38027D1BDE7005180B3 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		0495F38327D1BE4F005180B3 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		0495F38727D1BEBE005180B3 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		0495F38927D1BEF1005180B3 /* Budget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Budget.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,9 @@
 		0495F37827D1ACD6005180B3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0495F38627D1BE90005180B3 /* Add */,
+				0495F38527D1BE5B005180B3 /* Budget */,
+				0495F38227D1BE0F005180B3 /* Statistics */,
 				0495F37C27D1ACFC005180B3 /* Profile */,
 				0495F37D27D1AD05005180B3 /* Transactions */,
 				0495F36327D1A68B005180B3 /* ViewController.swift */,
@@ -138,6 +149,7 @@
 		0495F37C27D1ACFC005180B3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0495F38327D1BE4F005180B3 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -148,6 +160,30 @@
 				0495F37E27D1BC21005180B3 /* Transactions.storyboard */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		0495F38227D1BE0F005180B3 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				0495F38027D1BDE7005180B3 /* Statistics.storyboard */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		0495F38527D1BE5B005180B3 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				0495F38927D1BEF1005180B3 /* Budget.storyboard */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		0495F38627D1BE90005180B3 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				0495F38727D1BEBE005180B3 /* Add.storyboard */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,9 +244,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0495F38427D1BE4F005180B3 /* Profile.storyboard in Resources */,
 				0495F36C27D1A68C005180B3 /* LaunchScreen.storyboard in Resources */,
+				0495F38827D1BEBE005180B3 /* Add.storyboard in Resources */,
+				0495F38A27D1BEF1005180B3 /* Budget.storyboard in Resources */,
 				0495F36927D1A68C005180B3 /* Assets.xcassets in Resources */,
 				0495F36727D1A68B005180B3 /* Main.storyboard in Resources */,
+				0495F38127D1BDE7005180B3 /* Statistics.storyboard in Resources */,
 				0495F37F27D1BC21005180B3 /* Transactions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
