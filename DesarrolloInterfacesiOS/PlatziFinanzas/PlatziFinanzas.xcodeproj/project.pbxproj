@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		047F159927D29CB20005BB0A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047F159827D29CB20005BB0A /* Colors.xcassets */; };
+		047F159C27D2C3220005BB0A /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F159B27D2C3220005BB0A /* Shadow.swift */; };
 		0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F35F27D1A68B005180B3 /* AppDelegate.swift */; };
 		0495F36227D1A68B005180B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F36127D1A68B005180B3 /* SceneDelegate.swift */; };
 		0495F36427D1A68B005180B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F36327D1A68B005180B3 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		047F159827D29CB20005BB0A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		047F159B27D2C3220005BB0A /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		0495F35C27D1A68B005180B3 /* PlatziFinanzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziFinanzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0495F35F27D1A68B005180B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495F36127D1A68B005180B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		047F159A27D2C3000005BB0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				047F159B27D2C3220005BB0A /* Shadow.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0495F35327D1A68B005180B3 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		0495F35E27D1A68B005180B3 /* PlatziFinanzas */ = {
 			isa = PBXGroup;
 			children = (
+				047F159A27D2C3000005BB0A /* Extensions */,
 				0495F37327D1AC94005180B3 /* Resources */,
 				0495F37427D1AC9C005180B3 /* Base */,
 				0495F37527D1ACA1005180B3 /* Application */,
@@ -279,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0495F36427D1A68B005180B3 /* ViewController.swift in Sources */,
+				047F159C27D2C3220005BB0A /* Shadow.swift in Sources */,
 				0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */,
 				0495F36227D1A68B005180B3 /* SceneDelegate.swift in Sources */,
 			);
@@ -434,7 +446,7 @@
 				INFOPLIST_FILE = PlatziFinanzas/Base/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = SignIn;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -464,7 +476,7 @@
 				INFOPLIST_FILE = PlatziFinanzas/Base/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = SignIn;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
