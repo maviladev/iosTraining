@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="mwH-bF-I8a">
-                                <rect key="frame" x="67.5" y="16" width="185" height="96"/>
+                                <rect key="frame" x="50" y="16" width="220" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mwH-bF-I8a" secondAttribute="height" multiplier="295:153" id="Oa2-jR-MNl"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="304" id="wmc-AW-v7L"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egX-pf-xje">
-                                <rect key="frame" x="0.0" y="128" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="146" width="320" height="200"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RhU-TE-a6b">
                                         <rect key="frame" x="16" y="8" width="288" height="34"/>
@@ -92,7 +92,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Az-7jZ">
-                                <rect key="frame" x="114" y="352" width="92.5" height="25"/>
+                                <rect key="frame" x="114" y="370" width="92.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="dy9-IW-fS1"/>
                                 </constraints>
@@ -101,10 +101,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-1p-bh2">
-                                <rect key="frame" x="0.0" y="470" width="320" height="98"/>
+                                <rect key="frame" x="0.0" y="488" width="320" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-fW-1Q0">
-                                        <rect key="frame" x="118.5" y="28.5" width="83" height="41"/>
+                                        <rect key="frame" x="118.5" y="19.5" width="83" height="41"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="SIGN UP">
@@ -115,12 +115,12 @@
                                 <color key="backgroundColor" name="GreenColor"/>
                                 <constraints>
                                     <constraint firstItem="ZYM-fW-1Q0" firstAttribute="centerY" secondItem="Zth-1p-bh2" secondAttribute="centerY" id="214-7X-eof"/>
-                                    <constraint firstAttribute="height" constant="98" id="k1D-vD-1eL"/>
+                                    <constraint firstAttribute="height" constant="80" id="k1D-vD-1eL"/>
                                     <constraint firstItem="ZYM-fW-1Q0" firstAttribute="centerX" secondItem="Zth-1p-bh2" secondAttribute="centerX" id="tmL-Jh-B2E"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="syH-4x-KAL">
-                                <rect key="frame" x="24" y="401" width="272" height="53"/>
+                                <rect key="frame" x="24" y="419" width="272" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XK-nW-mqe">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="53"/>

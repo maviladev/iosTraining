@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		047F159927D29CB20005BB0A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047F159827D29CB20005BB0A /* Colors.xcassets */; };
 		047F159C27D2C3220005BB0A /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F159B27D2C3220005BB0A /* Shadow.swift */; };
+		047F159E27D2D1510005BB0A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047F159D27D2D1510005BB0A /* Onboarding.storyboard */; };
 		0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F35F27D1A68B005180B3 /* AppDelegate.swift */; };
 		0495F36227D1A68B005180B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F36127D1A68B005180B3 /* SceneDelegate.swift */; };
 		0495F36427D1A68B005180B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F36327D1A68B005180B3 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		047F159827D29CB20005BB0A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		047F159B27D2C3220005BB0A /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		047F159D27D2D1510005BB0A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		0495F35C27D1A68B005180B3 /* PlatziFinanzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziFinanzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0495F35F27D1A68B005180B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495F36127D1A68B005180B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		0495F37B27D1ACEF005180B3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				047F159D27D2D1510005BB0A /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047F159E27D2D1510005BB0A /* Onboarding.storyboard in Resources */,
 				0495F38427D1BE4F005180B3 /* Profile.storyboard in Resources */,
 				0495F36C27D1A68C005180B3 /* LaunchScreen.storyboard in Resources */,
 				0495F38827D1BEBE005180B3 /* Add.storyboard in Resources */,
