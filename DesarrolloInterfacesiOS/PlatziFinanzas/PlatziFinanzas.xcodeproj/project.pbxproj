@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047F159927D29CB20005BB0A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047F159827D29CB20005BB0A /* Colors.xcassets */; };
 		0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F35F27D1A68B005180B3 /* AppDelegate.swift */; };
 		0495F36227D1A68B005180B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F36127D1A68B005180B3 /* SceneDelegate.swift */; };
 		0495F36427D1A68B005180B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F36327D1A68B005180B3 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047F159827D29CB20005BB0A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0495F35C27D1A68B005180B3 /* PlatziFinanzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziFinanzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0495F35F27D1A68B005180B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495F36127D1A68B005180B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047F159727D29C920005BB0A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				047F159827D29CB20005BB0A /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		0495F35327D1A68B005180B3 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		0495F37327D1AC94005180B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				047F159727D29C920005BB0A /* Colors */,
 				0495F37727D1ACC1005180B3 /* Images */,
 			);
 			path = Resources;
@@ -252,6 +263,7 @@
 				0495F38827D1BEBE005180B3 /* Add.storyboard in Resources */,
 				0495F38A27D1BEF1005180B3 /* Budget.storyboard in Resources */,
 				0495F38C27D1CD44005180B3 /* SignIn.storyboard in Resources */,
+				047F159927D29CB20005BB0A /* Colors.xcassets in Resources */,
 				0495F36927D1A68C005180B3 /* Assets.xcassets in Resources */,
 				0495F36727D1A68B005180B3 /* Main.storyboard in Resources */,
 				0495F38127D1BDE7005180B3 /* Statistics.storyboard in Resources */,
