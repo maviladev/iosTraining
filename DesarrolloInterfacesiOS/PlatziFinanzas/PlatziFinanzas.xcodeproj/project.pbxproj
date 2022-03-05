@@ -24,6 +24,7 @@
 		0495F38C27D1CD44005180B3 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38B27D1CD44005180B3 /* SignIn.storyboard */; };
 		04E9366D27D3140500C8F9FA /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9366C27D3140500C8F9FA /* OnboardingContainerViewController.swift */; };
 		04E9366F27D315B300C8F9FA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9366E27D315B300C8F9FA /* OnboardingViewController.swift */; };
+		04E9367127D3279200C8F9FA /* OnboardingStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9367027D3279200C8F9FA /* OnboardingStepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0495F38B27D1CD44005180B3 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		04E9366C27D3140500C8F9FA /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		04E9366E27D315B300C8F9FA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		04E9367027D3279200C8F9FA /* OnboardingStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				047F159D27D2D1510005BB0A /* Onboarding.storyboard */,
 				04E9366C27D3140500C8F9FA /* OnboardingContainerViewController.swift */,
 				04E9366E27D315B300C8F9FA /* OnboardingViewController.swift */,
+				04E9367027D3279200C8F9FA /* OnboardingStepsViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				0495F36427D1A68B005180B3 /* ViewController.swift in Sources */,
 				04E9366F27D315B300C8F9FA /* OnboardingViewController.swift in Sources */,
+				04E9367127D3279200C8F9FA /* OnboardingStepsViewController.swift in Sources */,
 				047F159C27D2C3220005BB0A /* Shadow.swift in Sources */,
 				0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */,
 				04E9366D27D3140500C8F9FA /* OnboardingContainerViewController.swift in Sources */,

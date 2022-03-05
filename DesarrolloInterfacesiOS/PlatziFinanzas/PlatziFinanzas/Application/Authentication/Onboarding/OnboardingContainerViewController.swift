@@ -9,7 +9,7 @@ import UIKit
 
 class OnboardingContainerViewController: UIViewController {
     
-    @IBOutlet weak var pageControl: UIPageControl?
+    @IBOutlet weak var pageControl: UIPageControl!
     
     
     override func viewDidLoad() {
