@@ -22,6 +22,8 @@
 		0495F38827D1BEBE005180B3 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38727D1BEBE005180B3 /* Add.storyboard */; };
 		0495F38A27D1BEF1005180B3 /* Budget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38927D1BEF1005180B3 /* Budget.storyboard */; };
 		0495F38C27D1CD44005180B3 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495F38B27D1CD44005180B3 /* SignIn.storyboard */; };
+		04E9366D27D3140500C8F9FA /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9366C27D3140500C8F9FA /* OnboardingContainerViewController.swift */; };
+		04E9366F27D315B300C8F9FA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9366E27D315B300C8F9FA /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		0495F38727D1BEBE005180B3 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		0495F38927D1BEF1005180B3 /* Budget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Budget.storyboard; sourceTree = "<group>"; };
 		0495F38B27D1CD44005180B3 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		04E9366C27D3140500C8F9FA /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		04E9366E27D315B300C8F9FA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				047F159D27D2D1510005BB0A /* Onboarding.storyboard */,
+				04E9366C27D3140500C8F9FA /* OnboardingContainerViewController.swift */,
+				04E9366E27D315B300C8F9FA /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -294,8 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0495F36427D1A68B005180B3 /* ViewController.swift in Sources */,
+				04E9366F27D315B300C8F9FA /* OnboardingViewController.swift in Sources */,
 				047F159C27D2C3220005BB0A /* Shadow.swift in Sources */,
 				0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */,
+				04E9366D27D3140500C8F9FA /* OnboardingContainerViewController.swift in Sources */,
 				0495F36227D1A68B005180B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
