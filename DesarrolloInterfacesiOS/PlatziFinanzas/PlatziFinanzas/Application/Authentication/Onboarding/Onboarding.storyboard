@@ -25,14 +25,14 @@
                                     <constraint firstAttribute="height" constant="200" id="SrE-La-2yc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-3L-cLt">
-                                <rect key="frame" x="24" y="288" width="272" height="50"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-3L-cLt">
+                                <rect key="frame" x="24" y="288" width="272" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWQ-CX-s2Z">
-                                <rect key="frame" x="24" y="346" width="272" height="23.5"/>
+                                <rect key="frame" x="24" y="330.5" width="272" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" name="GrayLightColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,9 +109,14 @@
                                         <color key="value" name="GreenShadow"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="AIg-ne-1D8" kind="presentation" identifier="SignIn" id="Tmr-Qu-cJg"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-tW-sDt">
                                 <rect key="frame" x="102" y="390" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" name="GrayLightColor"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N9H-md-NQG"/>
@@ -135,6 +140,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOK-4n-BKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1284" y="278"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="opS-YS-RBQ">
+            <objects>
+                <viewControllerPlaceholder id="AIg-ne-1D8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qGi-en-kvC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1F-eQ-1ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1293" y="758"/>
         </scene>
     </scenes>
     <resources>

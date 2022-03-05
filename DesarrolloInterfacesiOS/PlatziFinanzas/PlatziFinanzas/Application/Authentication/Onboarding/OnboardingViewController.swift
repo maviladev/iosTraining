@@ -46,6 +46,14 @@ class OnboardingViewController: UIPageViewController {
         // Do any additional setup after loading the view.
         delegate = self
         dataSource = self
+        
+        pageControl?.numberOfPages = items.count
+        
+        updateContainerView(stepNumber: 0)
+    }
+    
+    func updateContainerView(stepNumber index: Int){
+        setViewControllers([contentViewController[index]], direction: .forward, animated: true, completion: nil)
     }
     
 
@@ -85,5 +93,10 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
 }
 
 extension OnboardingViewController: UIPageViewControllerDelegate {
-    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard let index = contentViewController.firstIndex(of: viewControllers!.first!) else {
+            return
+        }
+        pageControl?.currentPage = index
+    }
 }
