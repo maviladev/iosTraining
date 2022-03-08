@@ -11,6 +11,13 @@ class TransactionsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    fileprivate(set) lazy var emptyState: UIView = {
+        guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView else {
+            return UIView()
+        }
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,17 +26,6 @@ class TransactionsViewController: UIViewController {
         tableView.delegate = self
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -43,6 +39,9 @@ extension TransactionsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        let count = 0
+        tableView.backgroundView = count == 0 ? emptyState : nil
+        tableView.separatorStyle = count == 0 ? .none : .singleLine
+        return count
     }
 }

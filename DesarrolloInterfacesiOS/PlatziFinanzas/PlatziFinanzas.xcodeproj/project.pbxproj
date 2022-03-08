@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		044AE11C27D6EDD8003869EE /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AE11B27D6EDD8003869EE /* TransactionsViewController.swift */; };
+		044AE11E27D6F3FB003869EE /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044AE11D27D6F3FB003869EE /* EmptyState.xib */; };
 		047F159927D29CB20005BB0A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047F159827D29CB20005BB0A /* Colors.xcassets */; };
 		047F159C27D2C3220005BB0A /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F159B27D2C3220005BB0A /* Shadow.swift */; };
 		047F159E27D2D1510005BB0A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047F159D27D2D1510005BB0A /* Onboarding.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		044AE11B27D6EDD8003869EE /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		044AE11D27D6F3FB003869EE /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		047F159827D29CB20005BB0A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		047F159B27D2C3220005BB0A /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		047F159D27D2D1510005BB0A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				0495F37E27D1BC21005180B3 /* Transactions.storyboard */,
 				044AE11B27D6EDD8003869EE /* TransactionsViewController.swift */,
+				044AE11D27D6F3FB003869EE /* EmptyState.xib */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				0495F38A27D1BEF1005180B3 /* Budget.storyboard in Resources */,
 				0495F38C27D1CD44005180B3 /* SignIn.storyboard in Resources */,
 				047F159927D29CB20005BB0A /* Colors.xcassets in Resources */,
+				044AE11E27D6F3FB003869EE /* EmptyState.xib in Resources */,
 				0495F36927D1A68C005180B3 /* Assets.xcassets in Resources */,
 				0495F36727D1A68B005180B3 /* Main.storyboard in Resources */,
 				0495F38127D1BDE7005180B3 /* Statistics.storyboard in Resources */,

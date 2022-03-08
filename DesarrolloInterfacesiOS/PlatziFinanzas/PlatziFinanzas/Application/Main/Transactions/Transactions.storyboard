@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="48g-FQ-lyB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellid" rowHeight="100" id="hMv-RL-lor">
@@ -120,8 +120,8 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="48g-FQ-lyB" secondAttribute="bottom" id="Mvj-TZ-5Pn"/>
                             <constraint firstAttribute="trailing" secondItem="48g-FQ-lyB" secondAttribute="trailing" id="iAb-Qt-ey0"/>
+                            <constraint firstItem="48g-FQ-lyB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k6i-qd-qZR"/>
                             <constraint firstItem="48g-FQ-lyB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qIP-qB-xcu"/>
-                            <constraint firstItem="48g-FQ-lyB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uEE-2K-T1b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Transactions" id="SWP-jo-iN8"/>
