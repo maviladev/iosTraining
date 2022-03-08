@@ -10,6 +10,8 @@ import UIKit
 class BudgetViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var headerButton: [UIButton]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,10 @@ class BudgetViewController: UIViewController {
         
         let cell = UINib(nibName: "TransactionsCell", bundle: Bundle.main)
         tableView.register(cell, forCellReuseIdentifier: "cellid")
+    }
+    
+    @IBAction func animateHeader(sender: UIButton){
+        
     }
 }
 
