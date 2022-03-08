@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		044AE11C27D6EDD8003869EE /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AE11B27D6EDD8003869EE /* TransactionsViewController.swift */; };
 		044AE11E27D6F3FB003869EE /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044AE11D27D6F3FB003869EE /* EmptyState.xib */; };
+		044AE12027D702F5003869EE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AE11F27D702F5003869EE /* TabBarViewController.swift */; };
 		047F159927D29CB20005BB0A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047F159827D29CB20005BB0A /* Colors.xcassets */; };
 		047F159C27D2C3220005BB0A /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F159B27D2C3220005BB0A /* Shadow.swift */; };
 		047F159E27D2D1510005BB0A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047F159D27D2D1510005BB0A /* Onboarding.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		044AE11B27D6EDD8003869EE /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		044AE11D27D6F3FB003869EE /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
+		044AE11F27D702F5003869EE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		047F159827D29CB20005BB0A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		047F159B27D2C3220005BB0A /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		047F159D27D2D1510005BB0A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				0495F36327D1A68B005180B3 /* ViewController.swift */,
 				0495F36527D1A68B005180B3 /* Main.storyboard */,
 				0495F36A27D1A68C005180B3 /* LaunchScreen.storyboard */,
+				044AE11F27D702F5003869EE /* TabBarViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				04E9366F27D315B300C8F9FA /* OnboardingViewController.swift in Sources */,
 				04E9367127D3279200C8F9FA /* OnboardingStepsViewController.swift in Sources */,
 				047F159C27D2C3220005BB0A /* Shadow.swift in Sources */,
+				044AE12027D702F5003869EE /* TabBarViewController.swift in Sources */,
 				0495F36027D1A68B005180B3 /* AppDelegate.swift in Sources */,
 				04E9366D27D3140500C8F9FA /* OnboardingContainerViewController.swift in Sources */,
 				044AE11C27D6EDD8003869EE /* TransactionsViewController.swift in Sources */,
