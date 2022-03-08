@@ -133,14 +133,15 @@
             </objects>
             <point key="canvasLocation" x="50.625" y="166.90140845070422"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="lPw-5P-O6W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BNf-jq-ZfY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="U4W-xt-Rvu"/>
+                    <tabBarItem key="tabBarItem" title="" image="TabBarTransactions" id="eaq-Tc-bk3"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="Oq4-ey-Jno">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
@@ -176,6 +177,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TabBarTransactions" width="20" height="20"/>
         <namedColor name="GrayLightColor">
             <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
