@@ -33,6 +33,7 @@ class BasicAnimationsViewController: UIViewController {
         
         // TODO: Fire initial animations
         animaterTitle()
+        animateLogo()
     }
     
 //    MARK: - Animations
@@ -44,6 +45,26 @@ class BasicAnimationsViewController: UIViewController {
         
     }
 
-
-
+    func animateLogo() {
+        UIView.animate(withDuration: 1.5, delay: 0.75, options:[.curveEaseInOut], animations: {
+            
+            self.logoImageView.alpha = 1
+            self.logoImageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            
+        }) { (completed) in
+            self.animateLoading()
+        }
+    }
+    
+    func animateLoading() {
+        UIView.animate(withDuration: 1.5, delay: 0, options:[.repeat, .autoreverse, .curveEaseInOut ], animations: {
+            
+            self.loadingLabel.alpha = 1
+            self.loadingLabel.frame.origin.y += 50
+            self.loadingLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            
+        }) { (completed) in
+            print("Loading animation complete")
+        }
+    }
 }
