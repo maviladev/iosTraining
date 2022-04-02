@@ -53,11 +53,12 @@ class BasicAnimationsViewController: UIViewController {
             
         }) { (completed) in
             self.animateLoading()
+            self.segueToNextViewController(segueID: Segues.toSpringsVC, delay: 3.0)
         }
     }
     
     func animateLoading() {
-        UIView.animate(withDuration: 1.5, delay: 0, options:[.repeat, .autoreverse, .curveEaseInOut ], animations: {
+        UIView.animate(withDuration: 1, delay: 0, options:[.repeat, .autoreverse, .curveEaseInOut ], animations: {
             
             self.loadingLabel.alpha = 1
             self.loadingLabel.frame.origin.y += 50
