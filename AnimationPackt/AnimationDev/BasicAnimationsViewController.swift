@@ -23,13 +23,24 @@ class BasicAnimationsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         // TODO: Animation setup
+        titleLabel.alpha = 0
+        logoImageView.alpha = 0
+        loadingLabel.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // TODO: Fire initial animations
-        
+        animaterTitle()
+    }
+    
+//    MARK: - Animations
+    func animaterTitle() {
+        UIView.animate(withDuration: 1.5) {
+            self.titleLabel.alpha = 1
+            self.titleLabel.frame.origin.y -= 50
+        }
         
     }
 
